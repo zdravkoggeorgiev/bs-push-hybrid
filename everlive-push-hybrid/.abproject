@@ -79,5 +79,6 @@
   "projectVersion": "1",
   "WP8WindowsPublisherName": "CN=Telerik",
   "WP8PackageIdentityName": "1234Telerik.com.telerik.PushNotificationApp",
-  "WPSdk": "8.0"
+  "WPSdk": "8.0",
+  "iOSDeploymentTarget": "6.0"
 }

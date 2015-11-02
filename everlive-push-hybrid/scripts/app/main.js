@@ -1,5 +1,5 @@
 // This is your Telerik Backend Services API key.
-var bsApiKey = 'BACKEND_SERVICES_API_KEY';
+var bsApiKey = 'NgsJYHV68KDY5cuX';
 
 // This is the scheme (http or https) to use for accessing the Telerik Backend Services REST API.
 var bsScheme = 'http';
@@ -93,6 +93,17 @@ var app = (function () {
                     );
         };
         
+        var registerForPush2 = function() {
+            var that = this;
+            el.Users
+            .login('test1', 'test1')
+            .catch(function(err) {alert('LOGIN ERROR: ' + JSON.stringify(err))})
+            .then(function() {
+                return that.registerForPush();
+            })
+            .catch(function(err) {alert('REGISTER ERROR: ' + JSON.stringify(err))});
+        };
+        
         var unregisterFromPush = function() {
             el.push.unregister()
                 .then(
@@ -105,6 +116,7 @@ var app = (function () {
         
         return {
             registerForPush: registerForPush,
+            registerForPush2: registerForPush2,
             unregisterFromPush: unregisterFromPush
         };
     }());
